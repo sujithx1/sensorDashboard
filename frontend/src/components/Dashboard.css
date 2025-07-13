@@ -1,0 +1,56 @@
+.dashboard-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.sensor-card {
+  background: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.sensor-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+.sensor-status {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.sensor-status.critical {
+  background-color: #ffe4e4;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+}
+
+.sensor-status.warning {
+  background-color: #fff8e1;
+  color: #ff8c00;
+  border: 1px solid #ff8c00;
+}
+
+.sensor-status.healthy {
+  background-color: #e0f2f1;
+  color: #00796b;
+  border: 1px solid #00796b;
+}
+
+.loading {
+  margin-top: 2rem;
+  font-style: italic;
+  color: gray;
+}
