@@ -1,13 +1,4 @@
+📘 README
+This project is a lightweight Industrial IoT dashboard built using React (TypeScript) for the frontend and Node.js with Express (TypeScript) for the backend. The backend simulates mock sensor data (temperature, vibration, voltage, and current) and exposes it through a simple REST API. The frontend fetches this data every 5 seconds, displays it in a styled dashboard, and uses toast notifications to alert the user when the machine status is either "Warning" or "Critical".
 
-                                SENSOR READING 
-
-
-This project is a simple Industrial IoT dashboard built with React (TypeScript) on the frontend and Node.js + Express (TypeScript) on the backend. The backend simulates machine sensor data (temperature, vibration, voltage, current) and provides it via an API. The frontend fetches this data every 5 seconds and displays it in a styled dashboard with live status updates and toast alerts based on defined thresholds. The machine status logic is implemented as:
-
-Critical if both temperature > 80°C and vibration > 20 mm/s
-
-Warning if either temperature or vibration exceeds the limit
-
-Healthy otherwise
-
-I followed clean architecture principles in the backend to separate business logic (status calculation) from infrastructure (Express). On the frontend, I used modular components, Axios for API communication, and react-toastify for user-friendly alerts. In a production environment, I would replace mock data with real sensor feeds (via MQTT/WebSocket), improve error handling and retry logic, add authentication and role-based access, and use persistent storage (like MongoDB). Additionally, I would integrate charts, real-time updates using sockets, and a design system for UI consistency.
+I implemented the status logic based on given conditions: when both temperature and vibration exceed safe levels, the status is marked as "Critical"; when either one exceeds, it's "Warning"; otherwise, it's "Healthy". I used react-toastify for alerts, axios for HTTP requests, and kept the UI clean and responsive using basic CSS. If this were to move toward production, I’d enhance error handling, loading states, and possibly add data persistence and live updates later on.
